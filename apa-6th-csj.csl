@@ -1539,12 +1539,7 @@
       <key macro="issued-sort"/>
     </sort>
     <layout prefix="CSJ " suffix="" delimiter="; ">
-      <group delimiter=", ">
-        <text variable="citation-number"/>
-        <text macro="author-short" prefix=" (" suffix=")"/>
-        <text macro="issued-citation"/>
-        <text macro="citation-locator"/>
-      </group>
+    <text variable="citation-number"/>
     </layout>
 </citation>
   <bibliography hanging-indent="true" et-al-min="8" et-al-use-first="6" et-al-use-last="true" entry-spacing="0" line-spacing="2">
