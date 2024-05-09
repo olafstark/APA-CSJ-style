@@ -1824,6 +1824,7 @@
                 </group>
             </if>
             <else>
+                <text variable="citation-number" prefix="[" suffix="]. " />
                 <group delimiter=" " suffix=".">
                     <group delimiter=". ">
                         <text macro="author-bib"/>
