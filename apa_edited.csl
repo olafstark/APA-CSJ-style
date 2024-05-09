@@ -1836,7 +1836,6 @@
                     </group>
                     <text macro="access"/>
                     <text macro="publication-history"/>
-                    <text variable="citation-number" prefix="[" suffix="]"/>
                 </group>
             </else>
         </choose>
