@@ -1806,7 +1806,7 @@
     <sort>
         <key variable="citation-number" sort="ascending"/>
     </sort>
-    <layout prefix="(" suffix=")" delimiter=",">
+    <layout prefix="[" suffix="]" delimiter=",">
         <text variable="citation-number"/>
     </layout>
 </citation>
@@ -1833,7 +1833,7 @@
           </choose>
         </if>
         <else>
-          <text variable="citation-number" prefix="[" suffix="]. "/>
+          <text variable="citation-number" prefix="[" suffix="] "/>
           <group delimiter=" ">
             <group delimiter=". " suffix=".">
               <text macro="author-bib"/>
