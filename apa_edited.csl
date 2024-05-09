@@ -1833,7 +1833,7 @@
           </choose>
         </if>
         <else>
-          <text variable="citation-number" prefix="(" suffix=")"/>
+          
           <group delimiter=" ">
             <group delimiter=". " suffix=".">
               <text macro="author-bib"/>
