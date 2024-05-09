@@ -1820,16 +1820,22 @@
     </sort>
     <layout>
       <choose>
-        <!-- Custom handling for legal items -->
+        <!-- TODO: Add new item types -->
         <if type="bill hearing legal_case legislation regulation treaty" match="any">
-          <group suffix=". ">
-            <text macro="legal-cites"/>
-            <text variable="citation-number" prefix="[" suffix="]"/>
-          </group>
+          <!-- Legal items have different orders and delimiters -->
+          <choose>
+            <if variable="DOI URL" match="any">
+              <text macro="legal-cites"/>
+            </if>
+            <else>
+              <text macro="legal-cites" suffix="."/>
+            </else>
+          </choose>
         </if>
         <else>
-          <group delimiter=" " suffix=".">
-            <group delimiter=". ">
+          <text variable="citation-number" prefix="[" suffix="]"/>
+          <group delimiter=" ">
+            <group delimiter=". " suffix=".">
               <text macro="author-bib"/>
               <text macro="date-bib"/>
               <text macro="title-and-descriptions"/>
@@ -1839,9 +1845,9 @@
             </group>
             <text macro="access"/>
             <text macro="publication-history"/>
-            <text variable="citation-number" prefix="[" suffix="]"/>
           </group>
         </else>
       </choose>
     </layout>
-</bibliography>
+  </bibliography>
+</style>
